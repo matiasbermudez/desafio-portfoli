@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer{
+    background-color: #13171C;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer__seccion-contacto{
+    display: flex;
+}
+
+.footer__img{
+    width: 200px;
+    height: 150px;
+}
+
+.footer__seccion-redes img{
+    margin: 20px;
+    background-color: #192130;
+    padding: 10px;
+
+    border-radius: 50%;
+}
