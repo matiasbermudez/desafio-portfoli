@@ -1,8 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 body{
-    background-color: crimson;
+    background-image: url("../imgs/doodleItems.png") ;
+    background-color: black;
+}
+.titulo__portfolio{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    color: white;
+    margin: 40px;
+}
+.contenedor__portfolio{
+    display: grid;
+    justify-items: center;
+    margin: 100px 0 100px 0;
+}
+.card{
+    margin: 30px 0 30px 0;
+    max-width: 360px;
+    max-height: 523px;
+    font-family: 'Poppins';
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.5);
+    border: solid 2px black;
+    border-radius: 16px;
+    img{
+        margin: 20px 0 20px 0;
+        width: 265px;
+        height: 158px;
+    }
+    h2{
+        font-weight: 700;
+        font-size: 33px;
+        margin: 15px;
+    }
+    p{
+        font-weight: 400;
+        font-size: 16px;
+        padding: 20px;
+    }
+}
+@media (width > 986px){
+    .contenedor__portfolio{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .card{
+        margin:0;
+    }
 }

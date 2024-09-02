@@ -3,13 +3,13 @@ function fetchData() {
     const environment_id = "master"
     const access_token = "wqrr0CNfAfY9WP69-FPLTlH12VNnyIey7CUp4-TJJs4"
 
-    return fetch(`https://cdn.contentful.com/spaces/${space_id}/environments/${environment_id}/entries?access_token=${access_token}&content_type=serviciostp`)
+    return fetch(`https://cdn.contentful.com/spaces/${space_id}/environments/${environment_id}/entries?access_token=${access_token}&content_type=trabajos`)
         .then(response => { return response.json() })
         .then(result => { return result })
 }
 
+const contenedorEl = document.querySelector('.contenedor__portfolio')
 
-const contenedorEl2 = document.querySelector('.contenedor__servicios')
 
 function crearCard(url,titulo,texto) {
 
@@ -21,14 +21,13 @@ function crearCard(url,titulo,texto) {
             <h2>${titulo}</h2>
             <p>${texto}</p>
 `
-    contenedorEl2.appendChild(cardEl)
+    contenedorEl.appendChild(cardEl)
     console.log("SE CREO CON EXITO")
 }
 
 
 async function main() {
     const data = await fetchData()
-    console.log(data)
     const dataImg = data.includes.Asset
     const dataTxt = data.items
    
@@ -36,9 +35,6 @@ async function main() {
         const apiTitulo = dataTxt[i].fields.titulo
         const apiTxt = dataTxt[i].fields.texto
         const apiImg = dataImg[i].fields.file.url
-        console.log(apiTitulo)
-        console.log(apiTxt)
-        console.log(apiImg)
         crearCard(apiImg,apiTitulo,apiTxt)
     }
 }

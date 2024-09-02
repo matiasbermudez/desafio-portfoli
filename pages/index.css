@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url("../imgs/doodle\ items.png") ;
+    background-image: url("../imgs/doodleItems.png") ;
     background-color: black;
 }
 /*ARTICULO*/
@@ -91,7 +91,7 @@ body{
     }
     .articulo__imagen{
         width: 353px;
-        height: 340px;
+        height: 353px;
     }
     /*ARTICULO*/
     /*MAIN*/
