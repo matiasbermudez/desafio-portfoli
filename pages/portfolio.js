@@ -1,3 +1,4 @@
+//FUNCION DE FETCHING DE DATOS A CONTENTFULL
 function fetchData() {
     const space_id = "ubfx0j7r9chh"
     const environment_id = "master"
@@ -7,16 +8,12 @@ function fetchData() {
         .then(response => { return response.json() })
         .then(result => { return result })
 }
-
-const contenedorEl = document.querySelector('.contenedor__portfolio')
-
-
+//FUNCION DE CREACION DE CARD, PASO URL, TITULO Y TEXTO PARA IMPLEMENTARLO CON TEMPLATE STRING
 function crearCard(url,titulo,texto) {
-
+    const contenedorEl = document.querySelector('.contenedor__portfolio')
     const cardEl = document.createElement('article')
     cardEl.classList.add("card")
     cardEl.innerHTML = `
-
             <img src="${url}">
             <h2>${titulo}</h2>
             <p>${texto}</p>
@@ -24,8 +21,7 @@ function crearCard(url,titulo,texto) {
     contenedorEl.appendChild(cardEl)
     console.log("SE CREO CON EXITO")
 }
-
-
+//FUNCION ASINCRONA PARA MANEJAR LA PROMESA DEL FETCHING, LLAMO FUNCIONES Y PASO PARAMETROS
 async function main() {
     const data = await fetchData()
     const dataImg = data.includes.Asset

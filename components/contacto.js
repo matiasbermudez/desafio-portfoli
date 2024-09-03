@@ -21,6 +21,7 @@ function main() {
             <button type="submit" class="form__contacto-botonsubmit">Enviar</button>
         </form>
     `
+    //PASO URL Y ESCUCHO EL EVENTO DEL FORM, PREVENTDEFAULT Y TOMO EL MAIL Y EL MSJ DEL EVENTO
     const url = 'https://apx-api.vercel.app/api/utils/dwf'
     const formEl = document.querySelector('#contactForm')
     formEl.addEventListener('submit', (event) =>{
